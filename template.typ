@@ -36,10 +36,10 @@
 
 #let resume(author: (:), body) = {
   set document(
-    author: author.firstname + " " + author.lastname, 
+    author: author.firstname + " " + author.lastname,
     title: "resume",
   )
-  
+
   set text(
     font: ("思源黑體 TW"),
     lang: "zh",
@@ -68,7 +68,7 @@
     ],
     footer-descent: 0pt,
   )
-  
+
   // set paragraph spacing
   show par: set block(above: 0.75em, below: 0.75em)
   set par(justify: true)
@@ -77,7 +77,7 @@
     numbering: none,
     outlined: false,
   )
-  
+
   let name = {
     align(center)[
       #pad(bottom: 5pt)[
@@ -106,13 +106,13 @@
 
   let contacts = {
     set box(height: 11pt)
-    
+
     let linkedin_icon = box(image("assets/icons/linkedin.svg"))
     let github_icon = box(image("assets/icons/square-github.svg"))
     let email_icon = box(image("assets/icons/square-envelope-solid.svg"))
     let phone_icon = box(image("assets/icons/square-phone-solid.svg"))
     let separator = box(width: 5pt)
-    
+
     align(center)[
       #block[
         #align(horizon)[
@@ -131,7 +131,7 @@
           ]
         ]
       ]
-    ] 
+    ]
   }
 
   name
@@ -187,8 +187,8 @@
 }
 
 #let resume_category(body) = {
-  set text(size: 11pt, weight: "bold")
-  body
+  set text(size: 12pt, weight: "bold")
+  upper[#body]
 }
 
 #let resume_gpa(numerator, denominator) = {
@@ -197,18 +197,19 @@
 }
 
 // sections specific components
-#let education_item(organization, degree, gpa, time_frame) = {
+#let education_item(organization, department, degree, time_frame) = {
   set block(above: 0.7em, below: 0.7em)
   set pad(top: 5pt)
   pad[
-    #justify_align[
+    #block[
       #resume_organization[#organization]
-    ][
-      #gpa
     ]
     #justify_align[
-      #resume_degree[#degree]
+      #resume_degree[#department]
     ][
+      #resume_degree[#degree]
+    ]
+    #align(right)[
       #resume_time[#time_frame]
     ]
   ]
@@ -261,18 +262,23 @@
 #let skill_item(category, items) = {
   set block(below: 0.65em)
   set pad(top: 5pt)
-  
+
   pad[
-    #grid(
-      columns: (18fr, 80fr),
-      gutter: 10pt,
-      align(right)[
-        #resume_category[#category]
-      ],
-      align(left)[
-        #set text(size: 11pt, style: "normal", weight: "light")
-        #items.join(", ")
-      ],
-    )
+    #resume_category[#category]
+
+    #set text(size: 10pt, style: "normal", weight: "light")
+    #items.join(" • ")
+  ]
+}
+
+#let skill_item_list(category, items) = {
+  set block(below: 0.65em)
+  set pad(top: 5pt)
+
+  pad[
+    #resume_category[#category]
+
+    #set text(size: 10pt, style: "normal", weight: "light")
+    #list(..items)
   ]
 }
