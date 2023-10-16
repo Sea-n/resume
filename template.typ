@@ -140,6 +140,20 @@
   body
 }
 
+#let github_project_link(project_path) = {
+  let github_icon = box(image("assets/icons/square-github.svg"));
+  let github_url = "https://github.com/" + project_path;
+
+  set box(height: 10pt)
+
+  block[
+    #align(horizon)[
+      #github_icon
+      #box[#link(github_url)[#github_url]]
+    ]
+  ]
+}
+
 // general style
 #let resume_section(title) = {
   set text(
@@ -184,6 +198,11 @@
 #let resume_position(body) = {
   set text(size: 10pt, weight: "regular")
   smallcaps[#body]
+}
+
+#let resume_link(body) = {
+  set text(size: 10pt, weight: "regular")
+  body
 }
 
 #let resume_category(body) = {
@@ -242,6 +261,7 @@
   location,
   position,
   start_time,
+  project_link: none,
 ) = {
   set block(above: 0.7em, below: 0.7em)
   set pad(top: 5pt)
@@ -249,13 +269,16 @@
     #justify_align[
       #resume_organization[#name]
     ][
-      #resume_location[#location]
+      #resume_time[#start_time]
     ]
     #justify_align[
       #resume_position[#position]
     ][
-      #resume_time[#start_time]
+      #resume_location[#location]
     ]
+    #if project_link != none {
+      resume_link[#project_link]
+    }
   ]
 }
 

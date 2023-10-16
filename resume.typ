@@ -26,6 +26,7 @@
       "C++",
       "Python",
       "ECMAScript",
+      "Jsonnet",
     )
   )
   #skill_item_list(
@@ -57,6 +58,13 @@
       "Public Key Infrastructure",
     )
   )
+  #skill_item_list(
+    "Languages",
+    (
+      "Chinese: Native",
+      "English: Advanced",
+    )
+  )
 ]
 
 #let main_content = [
@@ -68,9 +76,24 @@
     "May. 2020 - Now",
   )
   #resume_item[
-    - Build logs management system with OpenSearch, Vector, and Fluent Bit.
-    - Redesign Kubernetes IaC with Flux CD and Ansible.
+    - #strong[Build logs management system with OpenSearch, Vector, and Fluent Bit.]
+
+      Write Ansible playbook to automate the deploy process, and to automatically rolling upgrade
+      the cluster to prevent downtime.
+
+    - #strong[Build metrics monitoring system with Prometheus, Thanos, and Grafana.]
+
+      In order to monitor multiple Kubernetes cluster, introducing Thanos to provide the ability to
+      query across different cluster and long term metric storage.
+
+    - #strong[Redesign Kubernetes IaC with Flux CD and Ansible.]
+
+      Redesign the deploy process and introduce Flux CD to achieve intuitive GitOps process, which
+      makes us to easily manage multiple Kubernetes cluster instances.
+
+    - Design IaC for monitoring mixins with Jsonnet and Flux CD OCI artifacts.
     - Manage high availability OpenLDAP cluster.
+    - Write Ansible playbook to do CI/CD for complex Nginx configuration files.
   ]
 
   #resume_section("Education")
@@ -94,6 +117,17 @@
     Aug. 2018 - Jul. 2022
   ]
 
+  #resume_section("Personal Project")
+  #personal_project_item_header(
+    "Rust library for OpenSSH key",
+    "",
+    "Maintainer",
+    "Feb. 2020",
+    project_link: github_project_link("Leo1003/rust-osshkeys"),
+  )
+  #resume_item[
+    -
+  ]
 ]
 
 #grid(
