@@ -26,6 +26,25 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: Resume
+          name: Resume-PDF
           path: resume.pdf
+          if-no-files-found: error
+  render:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: Resume-PDF
+      - name: Install poppler-utils
+        run: sudo apt install -y poppler-utils
+      - name: Render resume as PNG
+        run: pdftoppm resume.pdf resume -png
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Resume-PNG
+          path: '*.png'
           if-no-files-found: error
