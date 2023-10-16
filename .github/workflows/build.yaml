@@ -1,0 +1,31 @@
+name: Build Resume
+
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Roboto fonts
+        run: sudo apt install -y fonts-roboto
+      - name: Install Source Han Sans TW fonts
+        run: |
+          curl -sL -o SourceHanSansTW.zip https://github.com/adobe-fonts/source-han-sans/releases/latest/download/SourceHanSansTW.zip
+          unzip -d SourceHanSansTW SourceHanSansTW.zip
+          cp SourceHanSansTW/SubsetOTF/TW/*.otf /usr/share/fonts/
+          fc-cache -fv
+      - name: Setup Typst
+        uses: yusancky/setup-typst@v2
+        id: setup-typst
+        with:
+          version: 'latest'
+      - name: Print supported fonts
+        run: typst fonts
+      - name: Build resume
+        run: typst compile resume.typ
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Resume
+          path: resume.pdf
+          if-no-files-found: error
