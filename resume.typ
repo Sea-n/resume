@@ -23,7 +23,7 @@
   ][
     Master of Science
   ][
-    Aug. 2022 - Now
+    Aug. 2022 - Estimate 2024
   ]
 
   #education_item[
@@ -94,7 +94,7 @@
     "Information Technology Center",
     "Department of CS, NYCU",
     "Infrastructure Engineer (Part-time)",
-    "May. 2020 - Now",
+    "May. 2020 - Estimate 2024",
   )
   #resume_item[
     - #strong[In charge of the system team leader.]
