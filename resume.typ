@@ -15,6 +15,27 @@
 )
 
 #let sidebar_content = [
+  #resume_section("Education")
+  #education_item[
+    National Yang Ming Chiao Tung University
+  ][
+    Institute of Computer Science and Engineering
+  ][
+    Master of Science
+  ][
+    Aug. 2022 - Now
+  ]
+
+  #education_item[
+    National Yang Ming Chiao Tung University
+  ][
+    Department of Computer Science
+  ][
+    Bachelor of Science
+  ][
+    Aug. 2018 - Jul. 2022
+  ]
+
   #resume_section("Skills")
   #skill_item(
     "Programming Language",
@@ -23,9 +44,9 @@
       strong[C],
       strong[Bash],
       "C++",
+      "C#",
       "Python",
       "Javascript",
-      "C#",
       "Jsonnet",
     )
   )
@@ -95,27 +116,6 @@
     - Design IaC for monitoring mixins with Jsonnet and Flux CD OCI artifacts.
     - Manage high availability OpenLDAP cluster.
     - Write Ansible playbook to do CI/CD for complex Nginx configuration files.
-  ]
-
-  #resume_section("Education")
-  #education_item[
-    National Yang Ming Chiao Tung University
-  ][
-    Institute of Computer Science and Engineering
-  ][
-    Master of Science
-  ][
-    Aug. 2022 - Now
-  ]
-
-  #education_item[
-    National Yang Ming Chiao Tung University
-  ][
-    Department of Computer Science
-  ][
-    Bachelor of Science
-  ][
-    Aug. 2018 - Jul. 2022
   ]
 
   #resume_section("Personal Project")

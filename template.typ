@@ -2,6 +2,7 @@
 #let color_darknight = rgb("#131A28")
 #let color_darksky = rgb("#335E99")
 #let color_darkgray = rgb("#333333")
+#let color_gray = rgb("#555555")
 
 // layout utility
 #let justify_align(left_body, right_body) = {
@@ -42,7 +43,10 @@
   )
 
   set text(
-    font: ("思源黑體 TW"),
+    font: (
+      "Source Sans Pro",
+      "思源黑體 TW",
+    ),
     lang: "zh",
     size: 11pt,
     fill: color_darknight,
@@ -181,7 +185,7 @@
 }
 
 #let resume_time(body) = {
-  set text(weight: "light", style: "italic", size: 9pt)
+  set text(weight: "regular", style: "italic", size: 9pt)
   body
 }
 
@@ -192,6 +196,11 @@
 
 #let resume_organization(body) = {
   set text(size: 12pt, style: "normal", weight: "bold")
+  body
+}
+
+#let resume_department(body) = {
+  set text(size: 10pt, style: "normal", weight: "medium", fill: color_gray)
   body
 }
 
@@ -228,11 +237,10 @@
     #block[
       #resume_organization[#organization]
     ]
-    #justify_align[
-      #resume_degree[#department]
-    ][
-      #resume_degree[#degree]
-    ]
+    #resume_department[#department]
+
+    #resume_degree[#degree]
+
     #align(right)[
       #resume_time[#time_frame]
     ]

@@ -12,10 +12,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install Roboto fonts
         run: sudo apt install -y fonts-roboto
-      - name: Install Source Han Sans TW fonts
+      - name: Install Source Sans & Source Han Sans TW fonts
         run: |
+          curl -sL -o SourceSans.zip https://github.com/adobe-fonts/source-sans/releases/download/3.052R/OTF-source-sans-3.052R.zip
           curl -sL -o SourceHanSansTW.zip https://github.com/adobe-fonts/source-han-sans/releases/latest/download/SourceHanSansTW.zip
+          unzip -d SourceSans SourceSans.zip
           unzip -d SourceHanSansTW SourceHanSansTW.zip
+          cp SourceSans/OTF/*.otf /usr/share/fonts/
           cp SourceHanSansTW/SubsetOTF/TW/*.otf /usr/share/fonts/
           fc-cache -fv
       - name: Setup Typst
