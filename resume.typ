@@ -9,8 +9,7 @@
       github: "Leo1003",
       linkedin: "少甫-陳-3b0b3a20a",
       positions: (
-        "Aaaaaaaa Aaaaaaaa",
-        "Aaaa Aaaaa Aaaaaaaaa",
+        "System Team Leader in NYCU CSIT",
       )
   ),
 )
@@ -25,7 +24,8 @@
       strong[Bash],
       "C++",
       "Python",
-      "ECMAScript",
+      "Javascript",
+      "C#",
       "Jsonnet",
     )
   )
@@ -72,16 +72,17 @@
   #work_experience_item_header(
     "Information Technology Center",
     "Department of CS, NYCU",
-    "Infrastructure Engineer",
+    "Infrastructure Engineer (Part-time)",
     "May. 2020 - Now",
   )
   #resume_item[
+    - #strong[In charge of the system team leader.]
     - #strong[Build logs management system with OpenSearch, Vector, and Fluent Bit.]
 
       Write Ansible playbook to automate the deploy process, and to automatically rolling upgrade
       the cluster to prevent downtime.
 
-    - #strong[Build metrics monitoring system with Prometheus, Thanos, and Grafana.]
+    - #strong[Construct metrics monitoring system with Prometheus, Thanos, and Grafana.]
 
       In order to monitor multiple Kubernetes cluster, introducing Thanos to provide the ability to
       query across different cluster and long term metric storage.
@@ -119,14 +120,27 @@
 
   #resume_section("Personal Project")
   #personal_project_item_header(
-    "Rust library for OpenSSH key",
+    "rust-osshkeys",
     "",
     "Maintainer",
     "Feb. 2020",
     project_link: github_project_link("Leo1003/rust-osshkeys"),
   )
   #resume_item[
-    -
+    - Build a Rust library for accessing OpenSSH key in different formats.
+      Makes it possible to use, convert OpenSSH keys easily with Rust programs.
+  ]
+
+  #personal_project_item_header(
+    "cjail",
+    "",
+    "Maintainer",
+    "Feb. 2018",
+    project_link: github_project_link("Leo1003/cjail"),
+  )
+  #resume_item[
+    - A container jail to run process in an isolated environment. Learned a lot while working
+      on this project, including Linux namespace, cgroup, rlimits, signals, etc.
   ]
 ]
 

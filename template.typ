@@ -1,6 +1,7 @@
 // const color
 #let color_darknight = rgb("#131A28")
-#let color_darkgray = rgb("333333")
+#let color_darksky = rgb("#335E99")
+#let color_darkgray = rgb("#333333")
 
 // layout utility
 #let justify_align(left_body, right_body) = {
@@ -158,7 +159,11 @@
 #let resume_section(title) = {
   set text(
     size: 16pt,
-    weight: "regular"
+    weight: "regular",
+    fill: color_darksky,
+  )
+  set line(
+    stroke: color_darksky,
   )
   align(left)[
     #smallcaps[
@@ -283,7 +288,7 @@
 }
 
 #let skill_item(category, items) = {
-  set block(below: 0.65em)
+  set block(below: 1em)
   set pad(top: 5pt)
 
   pad[
@@ -295,7 +300,7 @@
 }
 
 #let skill_item_list(category, items) = {
-  set block(below: 0.65em)
+  set block(below: 1em)
   set pad(top: 5pt)
 
   pad[
