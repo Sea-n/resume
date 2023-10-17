@@ -88,8 +88,10 @@
       #pad(bottom: 5pt)[
         #block[
           #set text(size: 32pt, style: "normal", font: ("Roboto"))
-          #text(weight: "thin")[#author.firstname]
-          #text(weight: "bold")[#author.lastname]
+          #text(weight: "light")[#author.firstname]
+          #text(weight: "light")[#author.lastname]
+          #set text(size: 32pt, style: "normal", font: ("思源黑體 TW"))
+          #text(weight: "medium")[#author.chinesename]
         ]
       ]
     ]

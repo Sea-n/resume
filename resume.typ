@@ -4,6 +4,7 @@
   author: (
       firstname: "Shao-Fu",
       lastname: "Chen",
+      chinesename: "陳少甫",
       email: "leo881003@gmail.com",
       phone: "<REDACTED>",
       github: "Leo1003",
