@@ -51,7 +51,7 @@ jobs:
       - name: Install poppler-utils
         run: sudo apt install -y poppler-utils
       - name: Render resume as PNG
-        run: pdftoppm resume.pdf resume -png
+        run: pdftoppm resume.pdf resume -png -r 300
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
