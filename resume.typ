@@ -82,7 +82,7 @@
   #skill_item_list(
     "Languages",
     (
-      "Chinese: Native",
+      "Mandarin: Native",
       "English: Advanced",
     )
   )
