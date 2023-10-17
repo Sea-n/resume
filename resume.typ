@@ -130,7 +130,7 @@
   #resume_item[
     - Contribute the whole genetlink protocol implementation to the rust-netlink project.
     - Along with another 2 crates: `netlink-packet-generic`, `netlink-packet-wireguard`, which
-      enable Rust program to operate Wireguard tunnel without the need to depend on C library.
+      enable Rust program to operate WireGuard tunnel without the need to depend on C library.
   ]
 
   #personal_project_item_header(
