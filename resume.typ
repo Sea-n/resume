@@ -64,6 +64,7 @@
       "GitLab CI",
       "GitHub Actions",
       "Prometheus",
+      "Prometheus Operator",
       "Thanos",
     )
   )
