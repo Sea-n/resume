@@ -6,7 +6,7 @@
       firstname: "Shao-Fu",
       lastname: "Chen",
       chinesename: "陳少甫",
-      email: "leo881003@gmail.com",
+      email: "leoshijb@proton.me",
       phone: secret("phone"),
       github: "Leo1003",
       linkedin: "少甫-陳-3b0b3a20a",
