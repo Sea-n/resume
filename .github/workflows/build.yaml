@@ -32,7 +32,9 @@ jobs:
       - name: Print supported fonts
         run: typst fonts
       - name: Build resume
-        run: typst compile resume.typ
+        run: |
+          touch secrets.toml
+          typst compile resume.typ
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:

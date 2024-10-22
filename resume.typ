@@ -1,4 +1,5 @@
 #import "template.typ": *
+#import "secrets.typ": secret
 
 #show: resume.with(
   author: (
@@ -6,7 +7,7 @@
       lastname: "Chen",
       chinesename: "陳少甫",
       email: "leo881003@gmail.com",
-      phone: "<REDACTED>",
+      phone: secret("phone"),
       github: "Leo1003",
       linkedin: "少甫-陳-3b0b3a20a",
       positions: (
