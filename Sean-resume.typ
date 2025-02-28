@@ -62,7 +62,7 @@
       - #strong[CEH] (Certified Ethical Hacker)
       - ISC2 CC (Certified in Cybersecurity)
       - EMT-1 • Drone Pilot • Diver
-      - IELTS 6.0
+      - IELTS Score 6.0
     ]
   )
 
@@ -71,11 +71,11 @@
     (
       strong[Bash],
       strong[C/C++],
-      "Python (Django, Flask)",
       "PHP (Laravel)",
-      "JavaScript",
-      "Node.JS",
       "Vue.js",
+      "Python (Django, Flask)",
+      "JavaScript          ",
+      "Node.JS",
       "Java",
       "Verilog",
       "Qt",
@@ -137,7 +137,7 @@
     "IT Center of NYCU CS",
     "",
     "Course Speaker, Network Team, Web Team",
-    "Jan 2022 – Mar 2024",
+    "Sep 2020 – Jun 2024",
   )
   #resume_item[
     - Teach 9 courses for #strong[100+ students] including #strong[OSPF, RIP, LACP], FHRP, VyOS, ACL, AAA, Tunnel.

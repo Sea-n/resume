@@ -48,10 +48,11 @@
       "Inter",
       "Noto Sans CJK TC",
     ),
-    lang: "zh",
+    lang: "en",
     size: 11pt,
     fill: color_darknight,
-    fallback: true
+    fallback: true,
+    costs: (hyphenation: 200%),
   )
 
   set page(
@@ -161,7 +162,7 @@
   block[
     #align(horizon)[
       #github_icon
-      #box[#link(github_url)[#github_url]]
+      #box[#link(github_url)[#project_path]]
     ]
   ]
 }
@@ -193,7 +194,7 @@
 
 #let resume_summary(body) = {
   set text(size: 10pt, style: "normal", weight: "light")
-  set par(leading: 0.32em)
+  set par(leading: 0.48em)
   body
 }
 
