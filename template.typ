@@ -90,7 +90,7 @@
           #text(weight: "light")[#author.firstname]
           #text(weight: "light")[#author.lastname]
           #set text(size: 32pt, style: "normal", font: ("Noto Sans CJK TC"))
-          #text(weight: "medium")[#author.chinesename]
+          #text(weight: "medium")[#author.mandarinname]
         ]
       ]
     ]
@@ -113,20 +113,21 @@
   let contacts = {
     set box(height: 11pt)
 
-    let linkedin_icon = box(image("assets/icons/linkedin.svg"))
-    let github_icon = box(image("assets/icons/square-github.svg"))
     let email_icon = box(image("assets/icons/square-envelope-solid.svg"))
     let phone_icon = box(image("assets/icons/square-phone-solid.svg"))
+    let github_icon = box(image("assets/icons/square-github.svg"))
+    let linkedin_icon = box(image("assets/icons/linkedin.svg"))
+    let globe_icon = box(image("assets/icons/globe.svg"))
     let separator = box(width: 5pt)
 
     align(center)[
       #block[
         #align(horizon)[
-          #phone_icon
-          #box[#text(author.phone)]
-          #separator
           #email_icon
           #box[#link("mailto:" + author.email)[#author.email]]
+          #separator
+          #phone_icon
+          #box[#link("tel:" + author.phone)[#author.phone]]
           #separator
           #github_icon
           #box[#link("https://github.com/" + author.github)[#author.github]]
@@ -134,6 +135,11 @@
           #linkedin_icon
           #box[
             #link("https://www.linkedin.com/in/" + author.linkedin)[#author.linkedin]
+          ]
+          #separator
+          #globe_icon
+          #box[
+            #link("https://" + author.site)[#author.site]
           ]
         ]
       ]

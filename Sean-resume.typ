@@ -4,11 +4,12 @@
   author: (
       firstname: "Sean",
       lastname: "Wei",
-      chinesename: "韋詠祥",
+      mandarinname: "韋詠祥",
       email: "me@sean.taipei",
       phone: "+1 (784) 432-1575",
       github: "Sea-n",
       linkedin: "sean64",
+      site: "sean.cat/about",
       positions: (
         "IT Volunteer for Taiwan ICDF in Saint Vincent",
       )
