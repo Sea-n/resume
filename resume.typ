@@ -3,90 +3,81 @@
 
 #show: resume.with(
   author: (
-      firstname: "Shao-Fu",
-      lastname: "Chen",
-      chinesename: "陳少甫",
-      email: "leoshijb@proton.me",
+      firstname: "Sean",
+      lastname: "Wei",
+      chinesename: "韋詠祥",
+      email: "me@sean.taipei",
       phone: secret("phone"),
-      github: "Leo1003",
-      linkedin: "少甫-陳-3b0b3a20a",
+      github: "Sea-n",
+      linkedin: "sean64",
       positions: (
-        "System Team Leader in NYCU CSIT",
+        "IT Volunteer for Taiwan ICDF at Saint Vincent",
       )
   ),
 )
 
 #let sidebar_content = [
+  #resume_section("Summary")
+
+  #resume_summary[
+    Results-driven Computer Science graduate with strong software development and algorithmic problem-solving skills (LeetCode top 1.4%). Experienced in leading technical teams and open-source contributions (300+ PRs, 750+ stars). Combines hands-on project experience in web application development with community leadership at major tech conferences. Passionate about creating scalable solutions and optimizing performance, seeking to leverage technical expertise as a Software Engineer to drive innovation and solve complex problems.
+  ]
+
   #resume_section("Education")
   #education_item[
     National Yang Ming Chiao Tung University
   ][
-    Institute of Computer Science and Engineering
+    Master of Computer Science and Engineering
   ][
-    Master of Science
-  ][
-    Aug. 2022 - Estimate 2024
+    Sep 2023 - Jun 2024 (Suspended)
   ]
 
   #education_item[
-    National Yang Ming Chiao Tung University
+    National Chiao Tung University
   ][
-    Department of Computer Science
+    Bachelor of Computer Science
   ][
-    Bachelor of Science
-  ][
-    Aug. 2018 - Jul. 2022
+    Sep 2019 - Jun 2023
   ]
 
   #resume_section("Skills")
-  #skill_item(
-    "Programming Language",
-    (
-      strong[Rust],
-      strong[C],
-      strong[Bash],
-      "C++",
-      "C#",
-      "Python",
-      "Javascript",
-      "Jsonnet",
-    )
+
+  #skill_item_body(
+    "Achievements",
+    [
+      - LeetCode: Rating 2120 (Top #strong[1.4%]), solved #strong[100+ Hard] problems
+      - GitHub: #strong[300 PRs, 500+ followers, 750+ stars earned]
+      - Public Speaking: Delivered #strong[25+ technical talks] at conferences and schools
+    ]
   )
-  #skill_item_list(
+
+  #skill_item_body(
+    "Certifications",
+    [
+      - #strong[CEH] (Certified Ethical Hacker)
+      - ISC2 CC (Certified in Cybersecurity)
+      - EMT-1 (Emergency Medical Technician)
+      - IELTS 6.0
+    ]
+  )
+
+  #skill_item(
     "Technologies",
     (
-      strong[Kubernetes],
       strong[Linux],
       strong[Git],
-      strong[Ansible],
-      "OpenSearch",
-      "Flux CD",
-      "Dockerfile",
-      "GitLab CI",
-      "GitHub Actions",
-      "Prometheus",
-      "Prometheus Operator",
-      "Thanos",
+      "SQL",
+      "Docker",
     )
   )
-  #skill_item_list(
-    "Concepts",
+
+  #skill_item(
+    "Programming Languages",
     (
-      strong[High Availability],
-      strong[Object-Oriented Programming],
-      strong[Container],
-      "Operating System",
-      "Infrastructure as Code",
-      "DevOps",
-      "Monitoring",
-      "Public Key Infrastructure",
-    )
-  )
-  #skill_item_list(
-    "Languages",
-    (
-      "Mandarin: Native",
-      "English: Advanced",
+      strong[Bash],
+      strong[C/C++],
+      "Python",
+      "PHP",
     )
   )
 ]
@@ -94,74 +85,65 @@
 #let main_content = [
   #resume_section("Experience")
   #work_experience_item_header(
-    "Information Technology Center",
-    "Department of CS, NYCU",
-    "Infrastructure Engineer (Part-time)",
-    "May. 2020 - Estimate 2024",
+    "Taiwan ICDF",
+    "International Cooperation and Development Fund",
+    "IT Volunteer (Saint Vincent)",
+    "Nov 2024 – Jul 2025",
   )
   #resume_item[
-    - #strong[In charge of the system team leader.]
-    - #strong[Build logs management system with OpenSearch, Vector, and Fluent Bit.]
-
-      Write Ansible playbook to automate the deploy process, and to automatically rolling upgrade
-      the cluster to prevent downtime.
-
-    - #strong[Construct metrics monitoring system with Prometheus, Thanos, and Grafana.]
-
-      In order to monitor multiple Kubernetes cluster, introducing Thanos to provide the ability to
-      query across different cluster and long term metric storage.
-
-    - #strong[Redesign Kubernetes IaC with Flux CD and Ansible.]
-
-      Redesign the deploy process and introduce Flux CD to achieve intuitive GitOps process, which
-      makes us to easily manage multiple Kubernetes cluster instances.
-
-    - Design IaC for monitoring mixins with Jsonnet and Flux CD OCI artifacts.
-    - Manage high availability OpenLDAP cluster.
-    - Write Ansible playbook to do CI/CD for complex Nginx configuration files.
+    - Deployed and configured #strong[100+ CCTV cameras] using an automated setup tool, reducing manual effort by #strong[40%].
+    - Collaborated with #strong[Taiwanese vendors] and #strong[local government] to ensure seamless integration of surveillance infrastructure.
+    - Conducted #strong[cybersecurity assessments] and organized technical documentation for #strong[drone specifications] and #strong[network security policies].
+  ]
+  #work_experience_item_header(
+    "SITCON",
+    "Students’ Information Technology Conference",
+    "Agenda Team Lead",
+    "Jan 2022 – Mar 2024",
+  )
+  #resume_item[
+    - Defined the conference theme and key focus areas, attracting #strong[1000+ participants].
+    - Delivered a talk on #strong[parallel programming optimization], video recording viewed by 300+ students.
+    - Reviewed and provided feedback for 50+ student session submissions.
+    - Organized keynote and panel, invited 10+ industry experts and researchers.
+    - Organized mock presentations, improving session quality for #strong[140%] of presentations.
   ]
 
   #resume_section("Personal Project")
   #personal_project_item_header(
-    "genetlink",
-    "",
-    "Contributor",
-    "Sep. 2021",
-    project_link: github_project_link("rust-netlink/genetlink"),
+    "Anonymous Page for NCTU",
+    "Feb 2020 - Jul 2022",
+    project_link: github_project_link("Sea-n/xNCTU"),
   )
   #resume_item[
-    - Contribute the whole genetlink protocol implementation to the rust-netlink project.
-    - Along with another 2 crates: `netlink-packet-generic`, `netlink-packet-wireguard`, which
-      enable Rust program to operate WireGuard tunnel without the need to depend on C library.
+    - Developed an #strong[anonymous content submission] platform with #strong[OAuth authentication].
+    - Processed #strong[8,000+ submissions] automatically with a #strong[98%+ accuracy rate].
+    - Integrated with #strong[3 login methods] and #strong[5 social media platforms].
   ]
 
   #personal_project_item_header(
-    "rust-osshkeys",
-    "",
-    "Maintainer",
-    "Feb. 2020",
-    project_link: github_project_link("Leo1003/rust-osshkeys"),
+    "URL Shortener",
+    "Sep 2019 - Present",
+    project_link: github_project_link("Sea-n/tgpe"),
   )
   #resume_item[
-    - Build a Rust library for accessing OpenSSH key in different formats.
-      Makes it possible to use, convert OpenSSH keys easily with Rust programs.
+    - Built a #strong[Telegram Bot] for URL shortening, generating #strong[25,000+ links] for #strong[5,000+ users].
+    - Implemented #strong[blacklist and abuse detection], handling #strong[1,000+ malicious links].
   ]
 
   #personal_project_item_header(
-    "cjail",
-    "",
-    "Maintainer",
-    "Feb. 2018",
-    project_link: github_project_link("Leo1003/cjail"),
+    "GSAT Filter",
+    "Jun 2018 - Feb 2023",
+    project_link: github_project_link("Sea-n/gsat"),
   )
   #resume_item[
-    - A container jail to run process in an isolated environment. Learned a lot while working
-      on this project, including Linux namespace, cgroup, rlimits, signals, etc.
+    - Designed a #strong[university selection tool] based on Taiwan’s GSAT criteria.
+    - Assisted #strong[200,000+ students] in its first year, sustaining #strong[2,000+ organic clicks/month].
   ]
 ]
 
 #grid(
-  columns: (1fr, 2fr),
+  columns: (3fr, 5fr),
   column-gutter: 1em,
   sidebar_content,
   main_content,

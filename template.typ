@@ -3,6 +3,7 @@
 #let color_darksky = rgb("#335E99")
 #let color_darkgray = rgb("#333333")
 #let color_gray = rgb("#555555")
+#let color_lightgray = rgb("#888")
 
 // layout utility
 #let justify_align(left_body, right_body) = {
@@ -44,8 +45,8 @@
 
   set text(
     font: (
-      "Source Sans Pro",
-      "思源黑體 TW",
+      "Helvetica Neue",
+      "Noto Sans CJK TC",
     ),
     lang: "zh",
     size: 11pt,
@@ -65,10 +66,9 @@
           #author.firstname
           #author.lastname
           #sym.dot.c
-          #"Résumé"
+          #"Resume"
         ]
       ][
-        #context counter(page).display()
       ]
     ],
     footer-descent: 0pt,
@@ -86,10 +86,10 @@
     align(center)[
       #pad(bottom: 5pt)[
         #block[
-          #set text(size: 32pt, style: "normal", font: ("Roboto"))
+          #set text(size: 32pt, style: "normal", font: ("Helvetica Neue"))
           #text(weight: "light")[#author.firstname]
           #text(weight: "light")[#author.lastname]
-          #set text(size: 32pt, style: "normal", font: ("思源黑體 TW"))
+          #set text(size: 32pt, style: "normal", font: ("Noto Sans CJK TC"))
           #text(weight: "medium")[#author.chinesename]
         ]
       ]
@@ -181,18 +181,19 @@
 
 #let resume_item(body) = {
   set text(size: 10pt, style: "normal", weight: "light")
-  set par(leading: 0.65em)
+  set par(leading: 0.64em)
+  body
+}
+
+#let resume_summary(body) = {
+  set text(size: 10pt, style: "normal", weight: "light")
+  set par(leading: 0.32em)
   body
 }
 
 #let resume_time(body) = {
   set text(weight: "regular", style: "italic", size: 9pt)
   body
-}
-
-#let resume_degree(body) = {
-  set text(size: 10pt, weight: "light")
-  smallcaps[#body]
 }
 
 #let resume_organization(body) = {
@@ -206,7 +207,7 @@
 }
 
 #let resume_location(body) = {
-  set text(size: 12pt, style: "italic", weight: "light")
+  set text(size: 10pt, style: "italic", weight: "light")
   body
 }
 
@@ -216,7 +217,7 @@
 }
 
 #let resume_link(body) = {
-  set text(size: 10pt, weight: "regular")
+  set text(size: 10pt, weight: "regular", fill: color_lightgray)
   body
 }
 
@@ -225,13 +226,8 @@
   upper[#body]
 }
 
-#let resume_gpa(numerator, denominator) = {
-  set text(size: 12pt, style: "italic", weight: "light")
-  text[Cumulative GPA: #box[#strong[#numerator] / #denominator]]
-}
-
 // sections specific components
-#let education_item(organization, department, degree, time_frame) = {
+#let education_item(organization, department, time_frame) = {
   set block(above: 0.7em, below: 0.7em)
   set pad(top: 5pt)
   pad[
@@ -239,8 +235,6 @@
       #resume_organization[#organization]
     ]
     #resume_department[#department]
-
-    #resume_degree[#degree]
 
     #align(right)[
       #resume_time[#time_frame]
@@ -272,9 +266,7 @@
 
 #let personal_project_item_header(
   name,
-  location,
-  position,
-  start_time,
+  duration,
   project_link: none,
 ) = {
   set block(above: 0.7em, below: 0.7em)
@@ -283,12 +275,7 @@
     #justify_align[
       #resume_organization[#name]
     ][
-      #resume_time[#start_time]
-    ]
-    #justify_align[
-      #resume_position[#position]
-    ][
-      #resume_location[#location]
+      #resume_time[#duration]
     ]
     #if project_link != none {
       resume_link[#project_link]
@@ -318,4 +305,14 @@
     #set text(size: 10pt, style: "normal", weight: "light")
     #list(..items)
   ]
+}
+
+#let skill_item_body(category, body) = {
+  set block(below: 1em)
+  set pad(top: 5pt)
+
+  resume_category[#category]
+
+  set text(size: 10pt, style: "normal", weight: "light")
+  body
 }
