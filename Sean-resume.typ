@@ -23,11 +23,14 @@
     Results-driven Computer Science graduate with strong #strong[software development] and #strong[algorithmic problem-solving] skills (LeetCode top 1.4%). Experienced in leading technical teams and #strong[open-source contributions] (300+ PRs, 750+ stars). Combines hands-on #strong[project experience] in web application development with #strong[community leadership] at major tech conferences. Passionate about creating scalable solutions and #strong[optimizing performance], seeking to leverage technical expertise as a Software Engineer to drive innovation and solve complex problems.
   ]
 
+
+
   #resume_section("Education")
+
   #education_item[
     National Yang Ming Chiao Tung University
   ][
-    Master of Computer Science and Engineering
+    Master of Computer Science
   ][
     Sep 2023 - Jun 2024 (Suspended)
   ]
@@ -39,6 +42,8 @@
   ][
     Sep 2019 - Jun 2023
   ]
+
+
 
   #resume_section("Skills")
 
@@ -56,9 +61,26 @@
     [
       - #strong[CEH] (Certified Ethical Hacker)
       - ISC2 CC (Certified in Cybersecurity)
-      - EMT-1 (Emergency Medical Technician)
+      - EMT-1 • Drone Pilot • Diver
       - IELTS 6.0
     ]
+  )
+
+  #skill_item(
+    "Programming Languages",
+    (
+      strong[Bash],
+      strong[C/C++],
+      "Python (Django, Flask)",
+      "PHP (Laravel)",
+      "JavaScript",
+      "Node.JS",
+      "Vue.js",
+      "Java",
+      "Verilog",
+      "Qt",
+      "Perl",
+    )
   )
 
   #skill_item(
@@ -68,22 +90,24 @@
       strong[Git],
       "SQL",
       "Docker",
-    )
-  )
-
-  #skill_item(
-    "Programming Languages",
-    (
-      strong[Bash],
-      strong[C/C++],
-      "Python",
-      "PHP",
+      "Kubernetes",
+      "OAuth",
+      "Pthreads",
+      "awk",
+      "gcc",
+      "Postfix",
+      "Cisco IOS",
+      "Juniper JunOS",
+      "VyOS",
     )
   )
 ]
 
+
+
 #let main_content = [
   #resume_section("Experience")
+
   #work_experience_item_header(
     "Taiwan ICDF",
     "International Cooperation and Development Fund",
@@ -91,10 +115,11 @@
     "Nov 2024 – Jul 2025",
   )
   #resume_item[
-    - Deployed and configured #strong[100+ CCTV cameras] using an automated setup tool, reducing manual effort by #strong[40%].
+    - Write automated tool to configure #strong[100+ CCTV cameras], reducing setup time by #strong[40%].
     - Collaborated with #strong[Taiwanese vendors] and #strong[local government] to ensure seamless integration of surveillance infrastructure.
-    - Conducted #strong[cybersecurity assessments] and organized technical documentation for #strong[drone specifications] and #strong[network security policies].
+    - Conducted #strong[cybersecurity assessments] and organized technical documentation for #strong[network security policies].
   ]
+
   #work_experience_item_header(
     "SITCON",
     "Students’ Information Technology Conference",
@@ -102,14 +127,29 @@
     "Jan 2022 – Mar 2024",
   )
   #resume_item[
-    - Defined the conference theme and key focus areas, attracting #strong[1000+ participants].
-    - Delivered a talk on #strong[parallel programming optimization], video recording viewed by 300+ students.
-    - Reviewed and provided feedback for 50+ student session submissions.
-    - Organized keynote and panel, invited 10+ industry experts and researchers.
+    - Define the key focus area for conference with #strong[1000+ participants].
+    - Delivered a talk on #strong[parallel programming] to 300+ students.
+    - Reviewed and provided feedback for #strong[100+ session submissions].
     - Organized mock presentations, improving session quality for #strong[140%] of presentations.
   ]
 
+  #work_experience_item_header(
+    "IT Center of NYCU CS",
+    "",
+    "Course Speaker, Network Team, Web Team",
+    "Jan 2022 – Mar 2024",
+  )
+  #resume_item[
+    - Teach 9 courses for #strong[100+ students] including #strong[OSPF, RIP, LACP], FHRP, VyOS, ACL, AAA, Tunnel.
+    - Maintain #strong[10+ racks colocation] for whole department.
+    - Deploy ARP monitor to reduce debugging time by #strong[80%].
+    - Use #strong[Kubernetes] to deploy and debugging #strong[Laravel] services.
+  ]
+
+
+
   #resume_section("Personal Project")
+
   #personal_project_item_header(
     "Anonymous Page for NCTU",
     "Feb 2020 - Jul 2022",
