@@ -45,7 +45,7 @@
 
   set text(
     font: (
-      "Helvetica Neue",
+      "Inter",
       "Noto Sans CJK TC",
     ),
     lang: "zh",
@@ -86,7 +86,7 @@
     align(center)[
       #pad(bottom: 5pt)[
         #block[
-          #set text(size: 32pt, style: "normal", font: ("Helvetica Neue"))
+          #set text(size: 32pt, style: "normal", font: ("Inter"))
           #text(weight: "light")[#author.firstname]
           #text(weight: "light")[#author.lastname]
           #set text(size: 32pt, style: "normal", font: ("Noto Sans CJK TC"))

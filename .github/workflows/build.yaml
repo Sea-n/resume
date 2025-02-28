@@ -10,20 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install Roboto fonts
-        run: sudo apt install -y fonts-roboto
-      - name: Install Source Sans & Source Han Sans TW fonts
-        run: |
-          curl -sL -o SourceSans3.zip https://github.com/adobe-fonts/source-sans/releases/download/3.052R/OTF-source-sans-3.052R.zip
-          curl -sL -o SourceSansPro.zip https://github.com/adobe-fonts/source-sans/releases/download/3.006R/source-sans-pro-3.006R.zip
-          curl -sL -o SourceHanSansTW.zip https://github.com/adobe-fonts/source-han-sans/releases/latest/download/SourceHanSansTW.zip
-          unzip -d SourceSans3 SourceSans3.zip
-          unzip -d SourceSansPro SourceSansPro.zip
-          unzip -d SourceHanSansTW SourceHanSansTW.zip
-          cp SourceSans3/OTF/*.otf /usr/share/fonts/
-          cp SourceSansPro/source-sans-pro-3.006R/OTF/*.otf /usr/share/fonts/
-          cp SourceHanSansTW/SubsetOTF/TW/*.otf /usr/share/fonts/
-          fc-cache -fv
+      - name: Install fonts
+        run: sudo apt install -y fonts-inter fonts-noto-cjk
       - name: Setup Typst
         uses: yusancky/setup-typst@v2
         id: setup-typst
@@ -33,13 +21,12 @@ jobs:
         run: typst fonts
       - name: Build resume
         run: |
-          touch secrets.toml
-          typst compile resume.typ
+          typst compile Sean-resume.typ
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: Resume-PDF
-          path: resume.pdf
+          path: Sean-resume.pdf
           if-no-files-found: error
   render:
     runs-on: ubuntu-latest
@@ -53,7 +40,7 @@ jobs:
       - name: Install poppler-utils
         run: sudo apt install -y poppler-utils
       - name: Render resume as PNG
-        run: pdftoppm resume.pdf resume -png -r 300
+        run: pdftoppm Sean-resume.pdf Sean-resume -png -r 300
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:

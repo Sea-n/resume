@@ -2,10 +2,10 @@
 
 This resume is built with [Typst](https://typst.app/docs), which is a new markup-based typesetting system designed to be an alternative both to advanced tools like LaTeX and simpler tools like Word and Google Docs.
 
-Access the generated [PDF](https://Sea-n.github.io/resume/Resume-PDF/resume.pdf)
+Access the generated [PDF](https://Sea-n.github.io/resume/Resume-PDF/Sean-resume.pdf)
 
 Rendered resume:
-![](https://Sea-n.github.io/resume/Resume-PNG/resume-1.png)
+![](https://Sea-n.github.io/resume/Resume-PNG/Sean-resume-1.png)
 
 ## Credit
 

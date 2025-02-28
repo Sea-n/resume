@@ -1,5 +1,4 @@
 #import "template.typ": *
-#import "secrets.typ": secret
 
 #show: resume.with(
   author: (
@@ -7,11 +6,11 @@
       lastname: "Wei",
       chinesename: "韋詠祥",
       email: "me@sean.taipei",
-      phone: secret("phone"),
+      phone: "+1 (784) 432-1575",
       github: "Sea-n",
       linkedin: "sean64",
       positions: (
-        "IT Volunteer for Taiwan ICDF at Saint Vincent",
+        "IT Volunteer for Taiwan ICDF in Saint Vincent",
       )
   ),
 )
@@ -20,7 +19,7 @@
   #resume_section("Summary")
 
   #resume_summary[
-    Results-driven Computer Science graduate with strong software development and algorithmic problem-solving skills (LeetCode top 1.4%). Experienced in leading technical teams and open-source contributions (300+ PRs, 750+ stars). Combines hands-on project experience in web application development with community leadership at major tech conferences. Passionate about creating scalable solutions and optimizing performance, seeking to leverage technical expertise as a Software Engineer to drive innovation and solve complex problems.
+    Results-driven Computer Science graduate with strong #strong[software development] and #strong[algorithmic problem-solving] skills (LeetCode top 1.4%). Experienced in leading technical teams and #strong[open-source contributions] (300+ PRs, 750+ stars). Combines hands-on #strong[project experience] in web application development with #strong[community leadership] at major tech conferences. Passionate about creating scalable solutions and #strong[optimizing performance], seeking to leverage technical expertise as a Software Engineer to drive innovation and solve complex problems.
   ]
 
   #resume_section("Education")
@@ -45,7 +44,7 @@
   #skill_item_body(
     "Achievements",
     [
-      - LeetCode: Rating 2120 (Top #strong[1.4%]), solved #strong[100+ Hard] problems
+      - LeetCode: Rating 2120 (#strong[Top 1.4%]), solved #strong[100+ Hard] problems
       - GitHub: #strong[300 PRs, 500+ followers, 750+ stars earned]
       - Public Speaking: Delivered #strong[25+ technical talks] at conferences and schools
     ]
