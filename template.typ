@@ -293,7 +293,7 @@
     #resume_category[#category]
 
     #set text(size: 10pt, style: "normal", weight: "light")
-    #items.join(" • ")
+    #items.join(" • ")
   ]
 }
 
