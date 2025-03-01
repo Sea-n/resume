@@ -1,9 +1,7 @@
 // const color
 #let color_darknight = rgb("#131A28")
 #let color_darksky = rgb("#335E99")
-#let color_darkgray = rgb("#333333")
-#let color_gray = rgb("#555555")
-#let color_lightgray = rgb("#888")
+#let color_gray = rgb("#808080")
 
 // layout utility
 #let justify_align(left_body, right_body) = {
@@ -219,7 +217,7 @@
 }
 
 #let resume_link(body) = {
-  set text(size: 10pt, weight: "regular", fill: color_lightgray)
+  set text(size: 10pt, weight: "regular", fill: color_gray)
   body
 }
 
