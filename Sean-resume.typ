@@ -19,7 +19,7 @@
 #let sidebar_content = [
   #resume_section("Summary")
 
-  #resume_summary[
+  #resume_item[
     Results-driven Computer Science graduate with strong #strong[software development] and #strong[algorithmic problem-solving] skills (LeetCode top 1.4%). Experienced in leading technical teams and #strong[open-source contributions] (300+ PRs, 750+ stars). Combines hands-on #strong[project experience] in web application development with #strong[community leadership] at major tech conferences. Passionate about developing scalable solutions and #strong[optimizing performance], seeking to leverage my technical expertise as a Software Engineer to drive innovation and tackle complex challenges.
   ]
 

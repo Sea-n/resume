@@ -188,13 +188,8 @@
 
 #let resume_item(body) = {
   set text(size: 10pt, style: "normal", weight: "light")
-  set par(leading: 0.64em)
-  body
-}
-
-#let resume_summary(body) = {
-  set text(size: 10pt, style: "normal", weight: "light")
   set par(leading: 0.48em)
+  set list(spacing: 0.8em)
   body
 }
 
@@ -320,6 +315,5 @@
 
   resume_category[#category]
 
-  set text(size: 10pt, style: "normal", weight: "light")
-  body
+  resume_item[#body]
 }
