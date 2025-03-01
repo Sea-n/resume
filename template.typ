@@ -1,6 +1,6 @@
 // const color
 #let color_darknight = rgb("#131A28")
-#let color_darksky = rgb("#335E99")
+#let color_darksky = rgb("#482")
 #let color_gray = rgb("#808080")
 
 // layout utility
@@ -74,21 +74,14 @@
   // set paragraph spacing
   set par(spacing: 0.75em, justify: true)
 
-  set heading(
-    numbering: none,
-    outlined: false,
-  )
-
   let name = {
     align(center)[
       #pad(bottom: 5pt)[
-        #block[
-          #set text(size: 32pt, style: "normal", font: ("Inter"))
-          #text(weight: "light")[#author.firstname]
-          #text(weight: "light")[#author.lastname]
-          #set text(size: 32pt, style: "normal", font: ("Noto Sans CJK TC"))
-          #text(weight: "medium")[#author.mandarinname]
-        ]
+        #set text(weight: "light", size: 32pt)
+        #author.firstname
+        #author.lastname
+        #set text(weight: "regular")
+        #author.mandarinname
       ]
     ]
   }
