@@ -114,9 +114,9 @@
   let contacts = {
     set box(height: 11pt)
 
-    let email_icon = box(image("assets/icons/square-envelope-solid.svg"))
-    let phone_icon = box(image("assets/icons/square-phone-solid.svg"))
-    let github_icon = box(image("assets/icons/square-github.svg"))
+    let email_icon = box(image("assets/icons/envelope.svg"))
+    let phone_icon = box(image("assets/icons/phone.svg"))
+    let github_icon = box(image("assets/icons/github.svg"))
     let linkedin_icon = box(image("assets/icons/linkedin.svg"))
     let globe_icon = box(image("assets/icons/globe.svg"))
     let separator = box(width: 5pt)
@@ -154,7 +154,7 @@
 }
 
 #let github_project_link(project_path) = {
-  let github_icon = box(image("assets/icons/square-github.svg"));
+  let github_icon = box(image("assets/icons/github.svg"));
   let github_url = "https://github.com/" + project_path;
 
   set box(height: 10pt)
