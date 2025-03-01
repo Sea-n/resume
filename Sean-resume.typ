@@ -20,7 +20,7 @@
   #resume_section("Summary")
 
   #resume_item[
-    Results-driven Computer Science graduate with strong #strong[software development] and #strong[algorithmic problem-solving] skills (LeetCode top 1.4%). Experienced in leading technical teams and #strong[open-source contributions] (300+ PRs, 750+ stars). Combines hands-on #strong[project experience] in web application development with #strong[community leadership] at major tech conferences. Passionate about developing scalable solutions and #strong[optimizing performance], seeking to leverage my technical expertise as a Software Engineer to drive innovation and tackle complex challenges.
+    #strong[User-centric] software engineer with #strong[algorithmic excellence] (LeetCode Top 1.4%) and #strong[cybersecurity expertise] (CEH certified). #strong[Proactively solves] complex challenges through #strong[automation] while contributing to #strong[open-source] and sharing knowledge via #strong[30+ talks]. Exhibits strong #strong[cross-cultural collaboration] skills in Saint Vincent. Committed to #strong[continuous learning] and #strong[responsible innovation], seeking to create #strong[meaningful impact] through technology.
   ]
 
 
@@ -50,9 +50,9 @@
   #skill_item_body(
     "Achievements",
     [
-      - LeetCode: Rating 2120 (#strong[Top 1.4%]), solved #strong[100+ Hard-level] problems
-      - GitHub: #strong[300 PRs, 500+ followers, 750+ stars earned]
-      - Public Speaking: Delivered #strong[25+ technical talks] at conferences and schools
+      - LeetCode: Rating 2120 (#strong[Top 1.4%]), solved #strong[100+ Hard-level] problems.
+      - Public Speaking: Delivered #strong[30+ technical talks] at conferences and schools.
+      - GitHub: #strong[300 PRs, 500+ followers], earned 750+ stars.
     ]
   )
 
@@ -139,9 +139,7 @@
     "Sep 2020 – Jun 2024",
   )
   #resume_item[
-    - Taught 9 courses to #strong[100+ students], including #strong[OSPF, RIP, LACP], FHRP, VyOS, ACL, AAA, and Tunneling.
-    - Maintained #strong[10+ racks colocation] for the entire department.
-    - Deployed ARP monitor to reduce debugging time by #strong[80%].
+    - Taught 9 courses to #strong[100+ students], including #strong[OSPF, RIP, LACP], FHRP, VyOS.
     - Used #strong[Kubernetes] to deploy and debug #strong[Laravel] services.
   ]
 
