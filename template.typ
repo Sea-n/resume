@@ -38,7 +38,7 @@
 #let resume(author: (:), body) = {
   set document(
     author: author.firstname + " " + author.lastname,
-    title: "resume",
+    title: author.firstname + " Resume",
   )
 
   set text(
@@ -59,14 +59,12 @@
     footer: [
       #set text(fill: gray, size: 8pt)
       #justify_align_3[
-        #smallcaps[#datetime.today().display()]
+        #datetime.today().display()
       ][
-        #smallcaps[
-          #author.firstname
-          #author.lastname
-          #sym.dot.c
-          #"Resume"
-        ]
+        #author.firstname
+        #author.lastname
+        #sym.dot.c
+        #"Resume"
       ][
       ]
     ],
@@ -101,11 +99,9 @@
       weight: "regular"
     )
     align(center)[
-      #smallcaps[
-        #author.positions.join(
-          text[#"  "#sym.dot.c#"  "]
-        )
-      ]
+      #author.positions.join(
+        text[#"  "#sym.dot.c#"  "]
+      )
     ]
   }
 
@@ -169,17 +165,14 @@
 #let resume_section(title) = {
   set text(
     size: 16pt,
-    weight: "regular",
+    weight: "bold",
     fill: color_darksky,
   )
   set line(
     stroke: color_darksky,
   )
   align(left)[
-    #smallcaps[
-      // #text[#title.slice(0, 3)]#strong[#text[#title.slice(3)]]
-      #strong[#text[#title]]
-    ]
+    #title
     #box(width: 1fr, line(length: 100%))
   ]
 }
@@ -213,7 +206,7 @@
 
 #let resume_position(body) = {
   set text(size: 10pt, weight: "regular")
-  smallcaps[#body]
+  body
 }
 
 #let resume_link(body) = {
