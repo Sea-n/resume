@@ -19,8 +19,8 @@
 #let sidebar_content = [
   #resume_section("Summary")
 
-  #resume_item[
-    #strong[User-centric] software engineer with #strong[algorithmic excellence] (LeetCode Top 1.4%) and #strong[cybersecurity expertise] (CEH certified). #strong[Proactively solves] complex challenges through #strong[automation] while contributing to #strong[open-source] and sharing knowledge via #strong[30+ talks]. Exhibits strong #strong[cross-cultural collaboration] skills in Saint Vincent. Committed to #strong[continuous learning] and #strong[responsible innovation], seeking to create #strong[meaningful impact] through technology.
+  #resume_summary[
+    Software engineer with #strong[algorithmic excellence] (LeetCode Top 1.5% rated), #strong[cybersecurity expertise] (CEH certified), and #strong[networking proficiency] (course speaker).
   ]
 
 
@@ -50,7 +50,7 @@
   #skill_item_body(
     "Achievements",
     [
-      - LeetCode: Rating 2120 (#strong[Top 1.4%]), solved #strong[100+ Hard-level] problems.
+      - LeetCode: Rating 2100+ (#strong[Top 1.5%]), solved #strong[100+ Hard-level] problems.
       - Public Speaking: Delivered #strong[30+ technical talks] at conferences and schools.
       - GitHub: #strong[300 PRs, 500+ followers], earned 750+ stars.
     ]
@@ -61,7 +61,6 @@
     [
       - #strong[CEH] (Certified Ethical Hacker)
       - ISC2 CC (Certified in Cybersecurity)
-      - EMT-1 • Drone Pilot • Diver
       - IELTS Score 6.0
     ]
   )
@@ -69,9 +68,9 @@
   #skill_item(
     "Programming Languages",
     (
-      strong[Bash],
       strong[C/C++],
-      "PHP (Laravel)",
+      strong[Bash],
+      strong[PHP (Laravel)],
       "Vue.js",
       "Python (Django, Flask)",
       "JavaScript",
@@ -90,8 +89,8 @@
       strong[Git],
       "SQL",
       "Docker",
-      "Kubernetes",
       "OAuth",
+      "Kubernetes",
       "Pthreads",
       "AWK",
       "Postfix",
@@ -114,7 +113,7 @@
     "Nov 2024 – Jul 2025",
   )
   #resume_item[
-    - Wrote an automated tool to configure #strong[100+ CCTV cameras], reducing setup time by #strong[40%].
+    - Wrote an automated tool using #strong[Selenium] to configure #strong[100+ CCTV cameras], reducing setup time by #strong[40%].
     - Collaborated with #strong[Taiwanese provider] and #strong[local government] to ensure seamless integration of surveillance infrastructure.
     - Performed #strong[cybersecurity assessments] and compiled technical documentation for #strong[network security policies].
   ]
@@ -139,7 +138,7 @@
     "Sep 2020 – Jun 2024",
   )
   #resume_item[
-    - Taught 9 courses to #strong[100+ students], including #strong[OSPF, RIP, LACP], FHRP, VyOS.
+    - Taught 9 courses to #strong[100+ students], including #strong[OSPF], RIP, #strong[LACP], FHRP, VyOS.
     - Used #strong[Kubernetes] to deploy and debug #strong[Laravel] services.
   ]
 

@@ -1,6 +1,7 @@
 // const color
 #let color_darknight = rgb("#131A28")
-#let color_darksky = rgb("#482")
+#let color_h1 = rgb("#482")
+#let color_h2 = rgb("#248")
 #let color_gray = rgb("#808080")
 
 // layout utility
@@ -47,7 +48,8 @@
       "Noto Sans CJK TC",
     ),
     lang: "en",
-    size: 11pt,
+    size: 10pt,
+    weight: "light",
     fill: color_darknight,
     fallback: true,
     costs: (hyphenation: 200%),
@@ -57,7 +59,7 @@
     paper: "a4",
     margin: (left: 15mm, right: 15mm, top: 10mm, bottom: 10mm),
     footer: [
-      #set text(fill: gray, size: 8pt)
+      #set text(fill: gray, size: 0.8em)
       #justify_align_3[
         #datetime.today().display()
       ][
@@ -76,8 +78,8 @@
 
   let name = {
     align(center)[
-      #pad(bottom: 5pt)[
-        #set text(weight: "light", size: 32pt)
+      #pad(bottom: 0.5em)[
+        #set text(size: 3em)
         #author.firstname
         #author.lastname
         #set text(weight: "regular")
@@ -87,26 +89,23 @@
   }
 
   let positions = {
-    set text(
-      size: 9pt,
-      weight: "regular"
-    )
     align(center)[
+      #set text(weight: "regular")
       #author.positions.join(
-        text[#"  "#sym.dot.c#"  "]
+        text[#"  •  "]
       )
     ]
   }
 
   let contacts = {
-    set box(height: 11pt)
+    set box(height: 1em)
 
     let email_icon = box(image("assets/icons/envelope.svg"))
     let phone_icon = box(image("assets/icons/phone.svg"))
     let github_icon = box(image("assets/icons/github.svg"))
     let linkedin_icon = box(image("assets/icons/linkedin.svg"))
     let globe_icon = box(image("assets/icons/globe.svg"))
-    let separator = box(width: 5pt)
+    let separator = box(width: 0.5em)
 
     align(center)[
       #block[
@@ -144,7 +143,7 @@
   let github_icon = box(image("assets/icons/github.svg"));
   let github_url = "https://github.com/" + project_path;
 
-  set box(height: 10pt)
+  set box(height: 1em)
 
   block[
     #align(horizon)[
@@ -157,12 +156,12 @@
 // general style
 #let resume_section(title) = {
   set text(
-    size: 16pt,
+    size: 1.6em,
     weight: "bold",
-    fill: color_darksky,
+    fill: color_h1,
   )
   set line(
-    stroke: color_darksky,
+    stroke: color_h1,
   )
   align(left)[
     #title
@@ -171,51 +170,57 @@
 }
 
 #let resume_item(body) = {
-  set text(size: 10pt, style: "normal", weight: "light")
-  set par(leading: 0.48em)
-  set list(spacing: 0.8em)
+  set par(leading: 0.6em)
+  set list(spacing: 1em)
+  body
+}
+
+#let resume_summary(body) = {
+  set par(leading: 0.6em)
+  set list(spacing: 1em)
+  set text(costs: (hyphenation: 1000%))
   body
 }
 
 #let resume_time(body) = {
-  set text(weight: "regular", style: "italic", size: 9pt)
+  set text(weight: "regular", style: "italic", size: 0.9em)
   body
 }
 
 #let resume_organization(body) = {
-  set text(size: 12pt, style: "normal", weight: "bold")
+  set text(size: 1.2em, weight: "bold", fill: color_h2)
   body
 }
 
 #let resume_department(body) = {
-  set text(size: 10pt, style: "normal", weight: "medium", fill: color_gray)
+  set text(weight: "medium", fill: color_gray)
   body
 }
 
 #let resume_location(body) = {
-  set text(size: 10pt, style: "italic", weight: "light")
+  set text(style: "italic")
   body
 }
 
 #let resume_position(body) = {
-  set text(size: 10pt, weight: "regular")
+  set text(weight: "regular")
   body
 }
 
 #let resume_link(body) = {
-  set text(size: 10pt, weight: "regular", fill: color_gray)
+  set text(weight: "regular", fill: color_gray)
   body
 }
 
 #let resume_category(body) = {
-  set text(size: 12pt, weight: "bold")
+  set text(size: 1.2em, weight: "bold", fill: color_h2)
   upper[#body]
 }
 
 // sections specific components
 #let education_item(organization, department, time_frame) = {
   set block(above: 0.7em, below: 0.7em)
-  set pad(top: 5pt)
+  set pad(top: 0.5em)
   pad[
     #block[
       #resume_organization[#organization]
@@ -234,8 +239,8 @@
   position,
   time_frame
 ) = {
-  set block(above: 0.7em, below: 0.7em)
-  set pad(top: 5pt)
+  set block(above: 0.6em, below: 0.6em)
+  set pad(top: 0.6em, bottom: 0.4em)
   pad[
     #justify_align[
       #resume_organization[#company]
@@ -256,7 +261,7 @@
   project_link: none,
 ) = {
   set block(above: 0.7em, below: 0.7em)
-  set pad(top: 5pt)
+  set pad(top: 0.5em)
   pad[
     #justify_align[
       #resume_organization[#name]
@@ -270,34 +275,31 @@
 }
 
 #let skill_item(category, items) = {
-  set block(below: 1em)
-  set pad(top: 5pt)
+  set pad(bottom: 0.6em)
 
   pad[
     #resume_category[#category]
 
-    #set text(size: 10pt, style: "normal", weight: "light")
-    #items.join(" • ")
+    •  #items.join(" • ")
   ]
 }
 
 #let skill_item_list(category, items) = {
-  set block(below: 1em)
-  set pad(top: 5pt)
+  set pad(bottom: 0.6em)
 
   pad[
     #resume_category[#category]
 
-    #set text(size: 10pt, style: "normal", weight: "light")
     #list(..items)
   ]
 }
 
 #let skill_item_body(category, body) = {
-  set block(below: 1em)
-  set pad(top: 5pt)
+  set pad(bottom: 0.6em)
 
-  resume_category[#category]
+  pad[
+    #resume_category[#category]
 
-  resume_item[#body]
+    #resume_item[#body]
+  ]
 }
