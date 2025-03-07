@@ -1,4 +1,12 @@
-# Resume
+# Sean Resume
+
+### ❗ Migrated to LaTeX version
+
+Now it's migrated to [the LaTeX version on Overleaf](https://www.overleaf.com/read/yzrpmmxcyqgh#2560d5).
+
+This repo is no longer under maintenance.
+
+---
 
 This resume is built with [Typst](https://typst.app/docs), which is a new markup-based typesetting system designed to be an alternative both to advanced tools like LaTeX and simpler tools like Word and Google Docs.
 
